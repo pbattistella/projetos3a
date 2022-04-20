@@ -40,45 +40,50 @@
   </nav>
 
   <div class="container">
-      <div>
+      <div class="div-title">
           <h2>Lista de Funcionários</h2>
       </div>
-      <div>
-        <table class="table">
-          <thead>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead class="table-light">
             <tr>
               <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
-              <th scope="col"></th>
-              <th scope="col"></th>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Telefone</th>
+              <th scope="col">E-mail</th>
+              <th scope="col" colspan="2">
+                <a class="a-novo" href=""><i class="fas fa-plus-circle"></i> Novo</a>
+              </th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <th scope="row">1</th>
               <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td scope="col"><i class="fa fa-edit"></i></td>
-              <td scope="col"><i class="fa fa-trash"></i></td>
+              <td>567.789.123</td>
+              <td>(48)9999 12345</td>
+              <td>mark@gmail.com</td>
+              <td scope="col"><a class="a-edit" href="./edit/1"><i class="fa fa-edit"></i></a></td>
+              <td scope="col"><a class="a-delete" href="./delete/1"><i class="fa fa-trash"></i></a></td>
             </tr>
             <tr>
               <th scope="row">2</th>
               <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-              <td scope="col"><i class="fa fa-edit"></i></td>
-              <td scope="col"><i class="fa fa-trash"></i></td>
+              <td>123.444.555</td>
+              <td>(48)9999 54321</td>
+              <td>jacob@gmail.com</td>
+              <td scope="col"><a class="a-edit" href="./edit/2"><i class="fa fa-edit"></i></a></td>
+              <td scope="col"><a class="a-delete" href="./delete/2"><i class="fa fa-trash"></i></a></td>
             </tr>
             <tr>
               <th scope="row">3</th>
               <td>Larry</td>
-              <td>the Bird</td>
-              <td>@twitter</td>
-              <td scope="col"><i class="fa fa-edit"></i></td>
-              <td scope="col"><i class="fa fa-trash"></i></td>
+              <td>777.888.212</td>
+              <td>(48)9999 23445</td>
+              <td>Larry@gmail.com</td>
+              <td scope="col"><a class="a-edit" href="./edit/3"><i class="fa fa-edit"></i></a></td>
+              <td scope="col"><a class="a-delete" href="./delete/3"><i class="fa fa-trash"></i></a></td>
             </tr>
           </tbody>
         </table>

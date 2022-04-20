@@ -43,8 +43,54 @@ footer{
     width: 98%;
 }
 
+.a-edit{
+    color:green;
+}
+
+.a-edit:hover{
+    color:darkgreen;
+    font-weight: bold;
+}
+
+.a-delete{
+    color:crimson;
+}
+
+.a-delete:hover{
+    color:brown;
+    font-weight: bold;
+}
+
+.a-novo{
+    color:green;
+    padding: 7px;
+    text-decoration: none;
+}
+
+.a-novo:hover{
+    border:2px solid darkgreen;
+    color:darkgreen;
+    padding: 5px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.div-title{
+    background-color: blueviolet;
+    padding: 18px;
+}
+
+.div-title h2{
+    color: aliceblue;
+}
+
 @media screen and (max-width:500px){
     footer{
         display: block;
     }
+
+    .container{
+        width: 100%;
+    }
+
 }
