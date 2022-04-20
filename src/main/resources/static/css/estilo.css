@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    font-family: monospace;
+}
+
+header{
+    background-color: blueviolet;
+    padding: 20px;
+}
+
+header > h2{
+    color:#fff;
+}
+
+.container{
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 60%;
+}
+
+.row{
+    display: flex;
+}
+
+.col{
+    padding: 8px;
+}
+
+.container > img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    padding: 24px;
+    background-color: blueviolet;
+    color: #fff;
+}
+
+.card{
+    margin: auto;
+    width: 98%;
+}
+
+@media screen and (max-width:500px){
+    footer{
+        display: block;
+    }
+}
