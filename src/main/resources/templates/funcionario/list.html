@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 
 <head>
   <meta charset="UTF-8">
@@ -58,32 +58,16 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>567.789.123</td>
-              <td>(48)9999 12345</td>
-              <td>mark@gmail.com</td>
-              <td scope="col"><a class="a-edit" href="./edit/1"><i class="fa fa-edit"></i></a></td>
-              <td scope="col"><a class="a-delete" href="./delete/1"><i class="fa fa-trash"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>123.444.555</td>
-              <td>(48)9999 54321</td>
-              <td>jacob@gmail.com</td>
-              <td scope="col"><a class="a-edit" href="./edit/2"><i class="fa fa-edit"></i></a></td>
-              <td scope="col"><a class="a-delete" href="./delete/2"><i class="fa fa-trash"></i></a></td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>777.888.212</td>
-              <td>(48)9999 23445</td>
-              <td>Larry@gmail.com</td>
-              <td scope="col"><a class="a-edit" href="./edit/3"><i class="fa fa-edit"></i></a></td>
-              <td scope="col"><a class="a-delete" href="./delete/3"><i class="fa fa-trash"></i></a></td>
+            <tr th:each="funcionario:${funcionarios}">
+              <th scope="row" th:text="${funcionario.id}"></th>
+              <td th:text="${funcionario.nome}"></td>
+              <td th:text="${funcionario.cpf}"></td>
+              <td th:text="${funcionario.telefone}"></td>
+              <td th:text="${funcionario.email}"></td>
+              <td scope="col"><a class="a-edit" href="./edit/1">
+                <i class="fa fa-edit"></i></a></td>
+              <td scope="col"><a class="a-delete" href="./delete/1">
+                <i class="fa fa-trash"></i></a></td>
             </tr>
           </tbody>
         </table>
