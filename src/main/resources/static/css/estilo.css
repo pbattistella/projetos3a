@@ -78,10 +78,19 @@ footer{
 .div-title{
     background-color: blueviolet;
     padding: 18px;
+    border-radius: 15px;
 }
 
 .div-title h2{
     color: aliceblue;
+
+}
+
+.formulario{
+    margin-top: 18px;
+    padding: 8px;
+    border: 2px solid blueviolet;
+    border-radius: 15px;
 }
 
 @media screen and (max-width:500px){

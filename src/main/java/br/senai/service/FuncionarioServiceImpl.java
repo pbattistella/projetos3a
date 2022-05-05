@@ -22,4 +22,13 @@ public class FuncionarioServiceImpl implements FuncionarioService{
     public Funcionario findByNome(String nome) {
         return null;
     }
+
+    @Override
+    public Funcionario save(Funcionario funcionario){
+        try{
+            return funcionarioRepository.save(funcionario);
+        }catch (Exception e){
+            throw e;
+        }
+    }
 }

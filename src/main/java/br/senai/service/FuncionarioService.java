@@ -8,4 +8,6 @@ public interface FuncionarioService {
 
     public List<Funcionario> findAll();
     public Funcionario findByNome(String nome);
+    public Funcionario save(Funcionario funcionario);
+
 }
