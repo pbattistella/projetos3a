@@ -64,7 +64,7 @@
               <td th:text="${funcionario.cpf}"></td>
               <td th:text="${funcionario.telefone}"></td>
               <td th:text="${funcionario.email}"></td>
-              <td scope="col"><a class="a-edit" href="./edit/1">
+              <td scope="col"><a class="a-edit" th:href="@{'./edit/' + ${funcionario.id}}">
                 <i class="fa fa-edit"></i></a></td>
               <td scope="col"><a class="a-delete" href="./delete/1">
                 <i class="fa fa-trash"></i></a></td>

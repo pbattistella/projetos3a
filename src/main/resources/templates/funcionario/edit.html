@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../bootstrap-5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../fontawesome-5.15.3/css/all.css">
+  <link rel="stylesheet" href="../../css/estilo.css">
+  <title>Gerência de Projetos</title>
+</head>
+
+<body>
+  <header>
+    <h2>Gerência de Projetos</h2>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">NewProjects</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Projetos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/funcionario/list">Funcionários</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sobre">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+      <div class="div-title">
+          <h2>Funcionário</h2>
+      </div>
+
+      <div th:if="${isSaved}" class="alert alert-success">
+        <h4>Operação realizada com sucesso!</h4>         
+      </div>
+
+      <div th:if="${isError}" class="alert alert-danger">
+        <h4>Erro ao tentar salvar os dados!</h4>
+        <label th:text="#{errorMsg}"></label>
+      </div>
+
+
+      <form th:action="@{/funcionario/save}"
+      method="post" class="formulario"
+      th:object="${funcionario}">
+        <div class="form-floating mb-3">
+          <input type="number" th:field="${funcionario.id}" readonly class="form-control" id="floatingInputId" placeholder="Código">
+          <label for="floatingInputId">Código</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" th:field="${funcionario.nome}" class="form-control" id="floatingInputNome" placeholder="Nome">
+          <label for="floatingInputNome">Nome</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" th:field="${funcionario.cpf}" class="form-control" id="floatingInputCpf" placeholder="CPF">
+          <label for="floatingInputCpf">CPF</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="email" th:field="${funcionario.email}" class="form-control" id="floatingInputEmail" placeholder="E-mail">
+          <label for="floatingInputEmail">E-mail</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <input type="text" th:field="${funcionario.telefone}" class="form-control" id="floatingInputTelefone" placeholder="Telefone">
+          <label for="floatingInputNome">Telefone</label>
+        </div>
+
+        <div class="form-floating mb-3">
+          <button type="submit" class="btn btn-success" >Salvar</button>
+
+          <button type="button" class="btn btn-secondary"
+            onclick="window.location.href='../list'">
+            Cancelar
+        </button>
+        </div>
+
+      </form>
+      
+  </div>
+
+  
+  
+  <script src="../../js/jquery-3.6.0.min.js"></script>
+  <script src="../../js/popper.min.js"></script>
+  <script src="../../bootstrap-5.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
