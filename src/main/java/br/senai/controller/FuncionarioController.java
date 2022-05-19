@@ -48,6 +48,14 @@ public class FuncionarioController {
         }
     }
 
-
+    @GetMapping("/funcionario/delete/{id}")
+    public String delete(@PathVariable long id){
+        try{
+            funcionarioService.deleteById(id);
+        } catch (Exception e){
+            System.out.println("Erro: " + e.getMessage());
+        }
+        return "redirect:/funcionario/list";
+    }
 
 }

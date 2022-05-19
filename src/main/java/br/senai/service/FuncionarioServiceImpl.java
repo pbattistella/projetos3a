@@ -37,4 +37,13 @@ public class FuncionarioServiceImpl implements FuncionarioService{
             throw e;
         }
     }
+
+    @Override
+    public void deleteById(Long id){
+        try{
+            funcionarioRepository.deleteById(id);
+        } catch(Exception e){
+            throw  e;
+        }
+    }
 }

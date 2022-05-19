@@ -10,6 +10,7 @@ public interface FuncionarioService {
     public Funcionario findById(Long id);
     public Funcionario findByNome(String nome);
     public Funcionario save(Funcionario funcionario);
+    public void deleteById(Long id);
 
 
 }
