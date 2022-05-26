@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface FuncionarioService {
 
-    public List<Funcionario> findAll();
-    public Funcionario findById(Long id);
-    public Funcionario findByNome(String nome);
-    public Funcionario save(Funcionario funcionario);
-    public void deleteById(Long id);
+    List<Funcionario> findAll();
+    Funcionario findById(Long id);
+    Funcionario findByNome(String nome);
+    Funcionario save(Funcionario funcionario);
+    void deleteById(Long id);
 
 
 }
