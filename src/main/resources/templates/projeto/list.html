@@ -39,7 +39,7 @@
     </div>
   </nav>
 
-  <div class="container">
+  <div class="container-projeto">
       <div class="div-title">
           <h2>Lista de Projetos</h2>
       </div>
@@ -49,8 +49,8 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Nome</th>
-              <th scope="col">Data Inicial</th>
-              <th scope="col">Data Final</th>
+              <th scope="col" class="data">Data Inicial</th>
+              <th scope="col" class="data">Data Final</th>
               <th scope="col">Status</th>
               <th scope="col">Orçamento</th>
               <th scope="col" colspan="2">
@@ -62,10 +62,10 @@
             <tr th:each="projeto: ${projetos}">
               <th scope="row" th:text="${projeto.id}"></th>
               <td th:text="${projeto.nome}"></td>
-              <td th:text="${projeto.dataInicial}"></td>
-              <td th:text="${projeto.dataFinal}"></td>
+              <td th:text="${#dates.format(projeto.dataInicial,'dd-MM-yyyy')}"></td>
+              <td th:text="${#dates.format(projeto.dataFinal,'dd-MM-yyyy')}"></td>
               <td th:text="${projeto.status}"></td>
-              <td th:text="${projeto.orcamento}"></td>
+              <td th:text="${'R$' + #numbers.formatDecimal(projeto.orcamento,1,'DEFAULT', 2, 'DEFAULT')}"></td>
               <td scope="col"><a class="a-edit" th:href="@{'./edit/' + ${projeto.id}}">
                 <i class="fa fa-edit"></i></a></td>
               <td scope="col"><a class="a-delete" 
