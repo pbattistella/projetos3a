@@ -3,7 +3,7 @@ package br.senai.model;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.Date;
+import java.sql.Date;
 
 
 @Entity(name = "projeto")

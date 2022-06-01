@@ -17,6 +17,11 @@ public class ProjetoServiceImpl implements ProjetoService{
     }
 
     public Projeto save(Projeto projeto){
-        return null;
+        try{
+            return projetoRepository.save(projeto);
+        }catch (Exception e){
+            throw e;
+        }
+
     }
 }
