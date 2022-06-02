@@ -5,9 +5,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../bootstrap-5.0.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../fontawesome-5.15.3/css/all.css">
-  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="../../bootstrap-5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../fontawesome-5.15.3/css/all.css">
+  <link rel="stylesheet" href="../../css/estilo.css">
   <title>Gerência de Projetos</title>
 </head>
 
@@ -58,18 +58,18 @@
       method="post" class="formulario"
       th:object="${projeto}">
         <div class="form-floating mb-3">
-          <input type="number" th:field="*{id}" readonly class="form-control" id="floatingInputId" placeholder="Código">
+          <input type="number" th:field="${projeto.id}" readonly class="form-control" id="floatingInputId" placeholder="Código">
           <label for="floatingInputId">Código</label>
         </div>
 
         <div class="form-floating mb-3">
-          <input type="text" th:field="*{nome}" class="form-control" id="floatingInputNome" placeholder="Nome" required>
+          <input type="text" th:field="${projeto.nome}" class="form-control" id="floatingInputNome" placeholder="Nome" required>
           <label for="floatingInputNome">Nome</label>
         </div>
 
         <div class="form-floating mb-3">
           <select class="form-select" aria-label="Selecionar status"
-                  th:field="*{status}" required
+                  th:field="${projeto.status}" required
                   id="floatingInputStatus"
           >
             <option value="Em Planejamento">Em Planejamento</option>
@@ -81,20 +81,18 @@
           <label for="floatingInputStatus">Status</label>
         </div>
 
-
-
         <div class="form-floating mb-3">
-          <input type="date" th:field="*{dataInicial}" class="form-control" id="floatingInputDataInicial" placeholder="Data Inicial" required>
+          <input type="date" th:field="${projeto.dataInicial}" class="form-control" id="floatingInputDataInicial" placeholder="Data Inicial" required>
           <label for="floatingInputDataInicial">Data Inicial</label>
         </div>
 
         <div class="form-floating mb-3">
-          <input type="date" th:field="*{dataFinal}" class="form-control" id="floatingInputDataFinal" placeholder="Data Final" required>
+          <input type="date" th:field="${projeto.dataFinal}" class="form-control" id="floatingInputDataFinal" placeholder="Data Final" required>
           <label for="floatingInputDataFinal">Data Final</label>
         </div>
 
         <div class="form-floating mb-3">
-          <input type="number" th:field="*{orcamento}" class="form-control"
+          <input type="number" th:field="${projeto.orcamento}" class="form-control"
                  id="floatingInputOrcamento" placeholder="Orçamento" required>
           <label for="floatingInputOrcamento">Orçamento</label>
         </div>
@@ -102,7 +100,7 @@
         <div class="div-funcionarios">
           <label for="floatingInputFuncinarios">Lista de Funcionários</label>
           <select class="form-select" aria-label="Selecionar funcionáros"
-                  th:field="*{funcionarios}" required
+                  th:field="${projeto.funcionarios}" required
                   id="floatingInputFuncinarios"
                   multiple
                   size="10"
@@ -117,7 +115,7 @@
         <div class="form-floating mb-3">
           <button type="submit" class="btn btn-success" >Salvar</button>
           <button type="button" class="btn btn-secondary"
-            onclick="window.location.href='./list'">
+            onclick="window.location.href='../list'">
             Cancelar
         </button>
         </div>
@@ -128,9 +126,9 @@
 
   
   
-  <script src="../js/jquery-3.6.0.min.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../bootstrap-5.0.0/js/bootstrap.min.js"></script>
+  <script src="../../js/jquery-3.6.0.min.js"></script>
+  <script src="../../js/popper.min.js"></script>
+  <script src="../../bootstrap-5.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
