@@ -64,7 +64,7 @@ public class ProjetoController {
             System.out.println("Erro ao deletar o registro. "+ e.getMessage());
         }
 
-        return "redirect: projeto/list";
+        return "redirect: /projeto/list";
     }
 
 
