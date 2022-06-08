@@ -56,6 +56,17 @@ public class ProjetoController {
         return "projeto/add";
     }
 
+    @GetMapping("/projeto/delete/{id}")
+    public String delete(@PathVariable Long id){
+        try{
+            projetoService.deleteById(id);
+        }catch (Exception e){
+            System.out.println("Erro ao deletar o registro. "+ e.getMessage());
+        }
+
+
+    }
+
 
 
 }

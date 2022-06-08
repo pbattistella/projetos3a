@@ -31,4 +31,13 @@ public class ProjetoServiceImpl implements ProjetoService{
             throw e;
         }
     }
+
+    @Override
+    public void deleteById(Long id) {
+        try{
+            projetoRepository.deleteById(id);
+        }catch (Exception e){
+            throw e;
+        }
+    }
 }
